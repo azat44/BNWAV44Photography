@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+body {
+  cursor: none !important; /* Cacher le curseur système */
+  
+}
+
