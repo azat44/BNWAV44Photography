@@ -27,11 +27,10 @@ const MenusPage = () => {
                             to={index === 0 ? '/photo-gallery' : `/${items[index].toLowerCase()}`}
                         >
                             <motion.div
-                                whileHover={{ y: -15 }} // Ajustement du déplacement de l'animation
+                                whileHover={{ y: -15 }}
                                 onHoverStart={() => setHoveredIndex(index)}
                                 onHoverEnd={() => setHoveredIndex(null)}
-                                style={{ color: index === hoveredIndex ? 'rgba(0, 0, 0, 0.8x)' : 'black' }} // Utilisation de rgba pour réduire l'opacité
-                            >
+                                style={{ color: index === hoveredIndex ? 'rgba(0, 0, 0, 0.8x)' : 'black' }}>
                                 {items[index]}
                             </motion.div>
                         </Link>

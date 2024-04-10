@@ -1,10 +1,12 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import MenusPage from './components/Menu';
 import PhotoGalleryPage from './components/PhotoGallery';
+import ImagePage from './components/ImagePage'; // Importez la page ImagePage
 import { Cursor } from './components/Cursor';
 import "./App.css"
+
 const App = () => {
   return (
     <Router>
@@ -13,6 +15,7 @@ const App = () => {
         <Route path="/" element={<Header />} />
         <Route path="/menus" element={<MenusPage />} />
         <Route path="/photo-gallery" element={<PhotoGalleryPage />} />
+        <Route path="/image/:id" element={<ImagePage />} /> {/* Ajoutez la route pour ImagePage */}
       </Routes>
     </Router>
   );

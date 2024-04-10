@@ -3,7 +3,36 @@ import { Link } from 'react-router-dom';
 import './PhotoGalleryPage.css';
 import { useSpring, animated } from 'react-spring';
 import { FaArrowLeft } from 'react-icons/fa';
+import ImagePage from './ImagePage';
 import { motion } from "framer-motion";
+
+const images = [
+    { src: require('../images/1.jpg'), title: 'Image 1', description: 'Description de l\'image 1' },
+    { src: require('../images/2.jpg'), title: 'Image 2', description: 'Description de l\'image 2' },
+    { src: require('../images/3.jpg'), title: 'Image 3', description: 'Description de l\'image 3' },
+    { src: require('../images/4.jpg'), title: 'Image 4', description: 'Description de l\'image 4' },
+    { src: require('../images/1.jpg'), title: 'Image 1', description: 'Description de l\'image 1' },
+    { src: require('../images/2.jpg'), title: 'Image 2', description: 'Description de l\'image 2' },
+    { src: require('../images/3.jpg'), title: 'Image 3', description: 'Description de l\'image 3' },
+    { src: require('../images/4.jpg'), title: 'Image 4', description: 'Description de l\'image 4' },
+    { src: require('../images/1.jpg'), title: 'Image 1', description: 'Description de l\'image 1' },
+    { src: require('../images/2.jpg'), title: 'Image 2', description: 'Description de l\'image 2' },
+    { src: require('../images/3.jpg'), title: 'Image 3', description: 'Description de l\'image 3' },
+    { src: require('../images/4.jpg'), title: 'Image 4', description: 'Description de l\'image 4' },
+    { src: require('../images/1.jpg'), title: 'Image 1', description: 'Description de l\'image 1' },
+    { src: require('../images/2.jpg'), title: 'Image 2', description: 'Description de l\'image 2' },
+    { src: require('../images/3.jpg'), title: 'Image 3', description: 'Description de l\'image 3' },
+    { src: require('../images/4.jpg'), title: 'Image 4', description: 'Description de l\'image 4' },
+    { src: require('../images/1.jpg'), title: 'Image 1', description: 'Description de l\'image 1' },
+    { src: require('../images/2.jpg'), title: 'Image 2', description: 'Description de l\'image 2' },
+    { src: require('../images/3.jpg'), title: 'Image 3', description: 'Description de l\'image 3' },
+    { src: require('../images/4.jpg'), title: 'Image 4', description: 'Description de l\'image 4' },
+    { src: require('../images/1.jpg'), title: 'Image 1', description: 'Description de l\'image 1' },
+    { src: require('../images/2.jpg'), title: 'Image 2', description: 'Description de l\'image 2' },
+    { src: require('../images/3.jpg'), title: 'Image 3', description: 'Description de l\'image 3' },
+    { src: require('../images/4.jpg'), title: 'Image 4', description: 'Description de l\'image 4' },
+    // Ajoutez d'autres images ici selon vos besoins
+];
 
 const PhotoGalleryPage = () => {
     const [fullscreenImage, setFullscreenImage] = useState(null);
@@ -19,14 +48,13 @@ const PhotoGalleryPage = () => {
         config: { tension: 20, friction: 4 },
     });
 
-    const handleClick = (imageSrc) => {
-        setFullscreenImage(imageSrc);
+    const handleClick = (imageIndex) => {
+        setFullscreenImage(images[imageIndex].src);
     };
 
     const handleCloseFullscreen = () => {
         setFullscreenImage(null);
     };
-
 
     return (
         <div className="flex justify-center items-center bg-black">
@@ -37,114 +65,19 @@ const PhotoGalleryPage = () => {
                 <FaArrowLeft />
             </Link>
             <animated.div style={fadeIn} className="photo-grid">
-                <div className="photo-item-container">
-                    <img
-                        src={require('../images/2.jpg')}
-                        alt="image1"
-                        className="photo-item"
-                        onClick={() => handleClick(require('../images/2.jpg'))}
-                    />
-                    <div className="photo-item-title">IMAGE 1222222222222</div>
-                </div>
-                <div className="photo-item-container">
-                    <img
-                        src={require('../images/3.jpg')}
-                        alt="image2"
-                        className="photo-item"
-                        onClick={() => handleClick(require('../images/3.jpg'))}
-                    />
-                    <div className="photo-item-title">IMAGE 2222222</div>
-                </div>
-                <div className="photo-item-container">
-                    <img
-                        src={require('../images/7.jpg')}
-                        alt="image2"
-                        className="photo-item"
-                        onClick={() => handleClick(require('../images/3.jpg'))}
-                    />
-                    <div className="photo-item-title">IMAGE 24234234234232</div>
-                </div>
-                <div className="photo-item-container">
-                    <img
-                        src={require('../images/2.jpg')}
-                        alt="image2"
-                        className="photo-item"
-                        onClick={() => handleClick(require('../images/3.jpg'))}
-                    />
-                    <div className="photo-item-title">IMAGE 2</div>
-                </div>
-                <div className="photo-item-container">
-                    <img
-                        src={require('../images/4.jpg')}
-                        alt="image2"
-                        className="photo-item"
-                        onClick={() => handleClick(require('../images/3.jpg'))}
-                    />
-                    <div className="photo-item-title">IMAGE 2</div>
-                </div>
-                <div className="photo-item-container">
-                    <img
-                        src={require('../images/6.jpg')}
-                        alt="image2"
-                        className="photo-item"
-                        onClick={() => handleClick(require('../images/3.jpg'))}
-                    />
-                    <div className="photo-item-title">IMAGE 2</div>
-                </div>
-                <div className="photo-item-container">
-                    <img
-                        src={require('../images/4.jpg')}
-                        alt="image2"
-                        className="photo-item"
-                        onClick={() => handleClick(require('../images/3.jpg'))}
-                    />
-                    <div className="photo-item-title">IMAGE 2</div>
-                </div>
-                <div className="photo-item-container">
-                    <img
-                        src={require('../images/1.jpg')}
-                        alt="image2"
-                        className="photo-item"
-                        onClick={() => handleClick(require('../images/3.jpg'))}
-                    />
-                    <div className="photo-item-title">IMAGE 2</div>
-                </div>
-                <div className="photo-item-container">
-                    <img
-                        src={require('../images/2.jpg')}
-                        alt="image2"
-                        className="photo-item"
-                        onClick={() => handleClick(require('../images/3.jpg'))}
-                    />
-                    <div className="photo-item-title">IMAGE 2</div>
-                </div>
-                <div className="photo-item-container">
-                    <img
-                        src={require('../images/6.jpg')}
-                        alt="image2"
-                        className="photo-item"
-                        onClick={() => handleClick(require('../images/3.jpg'))}
-                    />
-                    <div className="photo-item-title">IMAGE 2</div>
-                </div>
-                <div className="photo-item-container">
-                    <img
-                        src={require('../images/7.jpg')}
-                        alt="image2"
-                        className="photo-item"
-                        onClick={() => handleClick(require('../images/3.jpg'))}
-                    />
-                    <div className="photo-item-title">IMAGE 2</div>
-                </div>
-                <div className="photo-item-container">
-                    <img
-                        src={require('../images/4.jpg')}
-                        alt="image2"
-                        className="photo-item"
-                        onClick={() => handleClick(require('../images/3.jpg'))}
-                    />
-                    <div className="photo-item-title">IMAGE 2</div>
-                </div>
+                {images.map((image, index) => (
+                    <div className="photo-item-container" key={index}>
+                        <Link to={`/image/${index}`}>
+                            <img
+                                src={image.src}
+                                alt={`image${index + 1}`}
+                                className="photo-item"
+                                onClick={() => handleClick(index)}
+                            />
+                        </Link>
+                        <div className="photo-item-title">{image.title}</div>
+                    </div>
+                ))}
             </animated.div>
             {fullscreenImage && (
                 <div className="fullscreen-container" onClick={handleCloseFullscreen}>

@@ -1,0 +1,62 @@
+.image-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+}
+
+.image-content {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+.image {
+    width: 500px; /* Largeur fixe pour toutes les images */
+    height: 700px; /* Hauteur fixe pour toutes les images */
+    object-fit: cover; /* Assure que l'image est redimensionnée de manière à conserver son ratio et à couvrir toute la zone */
+}
+
+.image-details {
+    margin-left: 20px;
+    color: white;
+    max-width: 50%;
+    overflow-y: auto; /* Ajoute une barre de défilement si les détails dépassent la hauteur fixe */
+}
+
+.image-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.image-description {
+    font-size: 18px;
+}
+
+.navigation {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: white;
+    
+}
+
+.navigation a {
+    font-size: 2rem;
+    color: lightgray;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: gray;
+}
+
+.image-index {
+    font-size: 24px; /* Même taille que les flèches */
+    color: white;
+    margin-left: 20px;
+    
+}
