@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { animated, useTrail } from 'react-spring';
 import { motion } from "framer-motion";
+import { SlArrowLeft } from "react-icons/sl";
 
 const MenusPage = () => {
     const items = ['Photos', 'About', 'Contact'];
@@ -16,6 +17,13 @@ const MenusPage = () => {
 
     return (
         <div className="flex items-center bg-white justify-center text-6xl font-bold h-screen">
+            <Link
+                to="/"
+                className="back-button bg-black text-gray-300 rounded-md p-2 transition duration-300 ease-in-out hover:bg-gray-300 hover:text-gray-800"
+                style={{ transition: 'all 0.6s ease' }}
+            >
+                <SlArrowLeft />
+            </Link>
             <ul className="text-black">
                 {trail.map((props, index) => (
                     <animated.li

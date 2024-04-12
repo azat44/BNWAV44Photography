@@ -1,17 +1,19 @@
 import React, { useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { FaArrowLeft } from 'react-icons/fa';
+import { SlArrowLeft } from "react-icons/sl";
 
 import '../ImagePage.css';
 
 const images = [
-    { src: require('../images/1.jpg'), title: 'Image 1', description: 'DESCRIPTION' },
-    { src: require('../images/2.jpg'), title: 'Image 2', description: 'DESCRIPTION' },
-    { src: require('../images/3.jpg'), title: 'Image 3', description: 'DESCRIPTION' },
-    { src: require('../images/4.jpg'), title: 'Image 4', description: 'DESCRIPTION' },
-    { src: require('../images/2.jpg'), title: 'Image 5', description: 'DESCRIPTION' },
-    { src: require('../images/3.jpg'), title: 'Image 6', description: 'DESCRIPTION' },
-    { src: require('../images/4.jpg'), title: 'Image 7', description: 'DESCRIPTION' },
+    { src: require('../images/1.jpg'), title: 'Gate to the world', description: 'This impressive staircase belongs to the underground station Überseequartier in the middle of Hambrg Hafencity - Europes largest inner-city urban development project.' },
+    {
+        src: require('../images/2.jpg'), title: 'Memorial st Nikolai', description: 'The Elbe promenade connects the Hamburg Landungsbrücken with the historic Speicherstadt. It serves as a dike for flood protection and its modern architecture offers countless perspectives for the photographer.'
+    },
+    { src: require('../images/3.jpg'), title: 'Kibbelsteg Bridge', description: 'The Burchardkai container terminal is the largest terminal in the Port of Hamburg. It is located on a 1.4 square kilometer area on the former Waltershof island in the Elbe River. It is a wonderful spot even when no containers are being loaded.' },
+    { src: require('../images/4.jpg'), title: 'IElbphilharmonie', description: 'The Stadthöfe have an eventful history from the French years of Hamburg when Napoleon commandeered the buildings in 1811 to establish the town hall in them, the use by the secret state police during the war, as well as the accommodation of the municipal administration. The Parisian flair from the French years of Hamburg could be preserved until today.' },
+    { src: require('../images/2.jpg'), title: 'Image 5', description: 'Even if street and architectural photography on the island of Sylt are only possible to a limited extent,e to time. ' },
+    { src: require('../images/3.jpg'), title: 'Image 6', description: 'Even if street and architectural photography on the island of Sylt are only possible to a limited extent, unexpected fantastic scenes are offered from time to time.' },
+    { src: require('../images/4.jpg'), title: 'Image 7', description: 'Even if street and architectural photography on the island of Sylt are only possible to a limited extent, unexpected fantastic scenes are offered from time to time.' },
     { src: require('../images/6.jpg'), title: 'Image 8', description: 'DESCRIPTION' },
     { src: require('../images/7.jpg'), title: 'Image 9', description: 'DESCRIPTION' },
     { src: require('../images/1.jpg'), title: 'Image 10', description: 'DESCRIPTION' },
@@ -53,7 +55,7 @@ const ImagePage = () => {
                 to="/photo-gallery"
                 className="back-button hover:bg-gray-300 hover:text-gray-800 rounded-md p-2"
                 style={{ transition: 'all 0.6s ease' }}>
-                <FaArrowLeft />
+                <SlArrowLeft />
             </Link>
             <div className="image-content">
                 <img src={image.src} alt={image.title} className="image" />

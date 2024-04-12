@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './PhotoGalleryPage.css';
 import { useSpring, animated } from 'react-spring';
-import { FaArrowLeft } from 'react-icons/fa';
+import { SlArrowLeft } from "react-icons/sl";
 import ImagePage from './ImagePage';
 import { motion } from "framer-motion";
 
@@ -62,7 +62,7 @@ const PhotoGalleryPage = () => {
                 to="/menus"
                 className="back-button hover:bg-gray-300 hover:text-gray-800 rounded-md p-2"
                 style={{ transition: 'all 0.6s ease' }}>
-                <FaArrowLeft />
+                <SlArrowLeft />
             </Link>
             <animated.div style={fadeIn} className="photo-grid">
                 {images.map((image, index) => (
