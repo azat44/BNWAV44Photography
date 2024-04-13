@@ -8,7 +8,6 @@ const handleBodyClick = (event) => {
     event.stopPropagation();
 };
 
-// Ajouter un écouteur d'événements de clic au corps
 document.body.addEventListener("click", handleBodyClick);
 
 const CursorStyles = styled(motion.div)`
