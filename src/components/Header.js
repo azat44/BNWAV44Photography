@@ -7,7 +7,7 @@ const Header = () => {
     const navigate = useNavigate();
 
     const handleLetterAnimationEnd = (event) => {
-        if (event.target.textContent === "Y") {
+        if (event.target.textContent === "4") {
             setIsDoorOpen(true);
             setTimeout(() => {
                 navigate('/menus');
@@ -24,24 +24,15 @@ const Header = () => {
     return (
         <div className={`fixed inset-0 flex items-center justify-center text-center bg-black text-white text-3xl font-bold ${isDoorOpen ? 'door-open' : ''}`}>
             <span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-1">W</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-2">E</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-3">L</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-4">C</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-5">O</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-6">M</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-7">E </span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-8">T</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-9">O </span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-10">M</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-11">Y </span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-12">G</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-13">A</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-14">L</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-15">L</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-16">E</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-17">R</span>
-                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-18">Y</span>
+                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-1">B</span>
+                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-2">N</span>
+                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-3">W</span>
+                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-4">_</span>
+                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-5">A</span>
+                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-6">V</span>
+                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-7">4</span>
+                <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-8">4 </span>
+
             </span>
         </div>
     );

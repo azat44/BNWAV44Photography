@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import { motion } from "framer-motion";
 import useMousePosition from "../hooks/useMouse";
-
+import isMobile from 'is-mobile';
 
 const handleBodyClick = (event) => {
     event.stopPropagation();
@@ -44,6 +44,12 @@ const Cursor = () => {
             document.body.removeEventListener("mouseleave", handleMouseLeave);
         };
     }, []);
+
+    const isMobileDevice = isMobile();
+
+    if (isMobileDevice) {
+        return null; // Ne rend pas le curseur personnalisé sur les appareils mobiles
+    }
 
     return (
         <CursorStyles
