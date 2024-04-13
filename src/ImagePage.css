@@ -1,5 +1,6 @@
 .image-page-container {
     display: flex;
+    flex-direction: column;     
     justify-content: center;
     align-items: center;
     height: 100vh;
@@ -11,7 +12,8 @@
     align-items: center;
     max-width: 100%;
     overflow: hidden;
-    margin-left:100px
+    margin-left: 100px; 
+    margin-bottom: 20px; 
 }
 
 .image {
@@ -40,11 +42,9 @@
 }
 
 .navigation {
-    position: fixed;
-    top: 20px;
-    right: 20px;
     color: white;
-    
+    display: flex;
+    align-items: center;
 }
 
 .navigation a {
@@ -59,8 +59,56 @@
 }
 
 .image-index {
-    font-size: 24px; 
+    font-size: 24px;
     color: white;
     margin-left: 20px;
-    
+}
+
+@media only screen and (max-width: 768px) {
+    .image-page-container {
+        padding: 20px; 
+    }
+
+    .image-content {
+        flex-direction: column; 
+        align-items: center; 
+        margin-left: 0; 
+    }
+
+    .image {
+        width: 350px; 
+        height: 500px; 
+        object-fit: cover;
+        margin-bottom: 20px; 
+    }
+
+    .image-details {
+        margin-left: 0; 
+        max-width: 400px;
+        text-align: center; 
+    }
+
+    .image-title {
+        font-size: 24px; 
+        margin-bottom: 10px; 
+    }
+
+    .image-description {
+        font-size: 16px; 
+    }
+
+    .navigation {
+        justify-content: center; 
+        margin-bottom: 20px;
+    }
+
+    .navigation a {
+        font-size: 1.5rem; 
+        margin-left: 10px; 
+    }
+
+    .image-index {
+        font-size: 18px; 
+        margin-left: 10px; 
+    }
 }

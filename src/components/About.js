@@ -16,9 +16,9 @@ const About = () => {
     ];
 
     const trail = useTrail(textItems.length, {
-        from: { opacity: 0, transform: 'translateY(50px)' },
+        from: { opacity: 0, transform: 'translateY(100px)' },
         to: { opacity: 1, transform: 'translateY(0)' },
-        delay: 500,
+        config: { tension: 400, friction: 100 }, // Ajuster les valeurs de tension et de friction
     });
 
     return (

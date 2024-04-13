@@ -24,5 +24,45 @@ body{
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1); 
     border-radius: 10px; 
     padding: 20px;
+    margin-right:8em;
+    margin-top:6em
   }
+
+@media (max-width: 768px) {
+  .contact-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background: black;
+      padding: 20px;
+  }
+
+  .mobile-header {
+      text-align: center;
+      margin-bottom: 20px;
+  }
+
+  .contact-form {
+      width: 100%;
+      max-width: 400px;
+      background: white;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      text-align: left;
+      margin-left:8em;
+      margin-top:60px
+  }
+
+  .mobile-header p {
+    font-size: 24px; 
+}
+
+  .mobile-header h1 {
+      font-size: 20px; 
+      color: white; 
+  }
+
+}
+
   

@@ -94,7 +94,14 @@ const ContactForm = () => {
     }, [])
 
     return (
+
         <div className="contact-container">
+            <div className="mobile-header">
+                <div className="flex flex-col justify-center text-center lg:p-40 md:text-left">
+                    <p data-aos="fade-down" className="uppercase font-medium opacity-40 text-white">Contact Us</p>
+                    <h1 data-aos="fade-up" className="lg:text-6xl md:text-5xl text-white text-4xl">We want to hear from you</h1>
+                </div>
+            </div>
             <Link
                 to="/menus"
                 className="back-button hover:bg-gray-300 hover:text-gray-800 rounded-md p-2"
