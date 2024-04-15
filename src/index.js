@@ -21,6 +21,9 @@ lockOrientation();
 // Écouter l'événement de changement d'orientation et bloquer l'orientation en mode portrait
 window.addEventListener('orientationchange', lockOrientation);
 
+// Verrouiller la taille de la fenêtre pour empêcher le défilement horizontal
+document.body.style.overflowX = 'hidden';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
