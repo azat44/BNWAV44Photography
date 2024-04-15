@@ -98,8 +98,11 @@
     }
 
     .photo-item {
-        height: 230px; 
-        margin-top:
+        height: 200px; 
+        width: 150px; 
+        object-fit: cover; 
+
+
     }
 
     .photo-item-title {

@@ -36,8 +36,8 @@ body {
 
 @media (max-width: 768px) {
   .back-to-top {
-    font-size: 6px; /* Réduire la taille de la police */
-    padding: 4px 6px; /* Réduire le rembourrage */
+    font-size: 10px; /* Réduire la taille de la police */
+    padding: 8px 10px; /* Réduire le rembourrage */
     margin-right:-11.5px
   }
 } 
