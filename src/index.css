@@ -8,3 +8,18 @@ body {
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* index.css */
+@media only screen and (orientation: landscape) {
+  html, body {
+      width: 100vh;
+      height: 100vw;
+      overflow: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      transform-origin: top left;
+      transform: rotate(90deg);
+  }
+}
