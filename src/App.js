@@ -36,7 +36,7 @@ const App = () => {
         <Route path="/contact" element={<ContactForm />} />
         <Route path="/about" element={<About />} />
       </Routes>
-      <ScrollToTopButton pcScrollOffset={1600} mobileScrollOffset={1900} />
+      <ScrollToTopButton pcScrollOffset={1600} mobileScrollOffset={1700} />
     </Router>
   );
 };
