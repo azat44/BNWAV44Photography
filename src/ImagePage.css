@@ -145,3 +145,8 @@
         font-weight: lighter; 
     }
 }
+
+body {
+    overflow-y: scroll; /* Autoriser le défilement vertical */
+    overscroll-behavior-y: contain; /* Empêcher le défilement de se propager à l'élément parent */
+}
