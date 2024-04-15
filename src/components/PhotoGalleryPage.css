@@ -89,24 +89,27 @@
     font-size: 20px;
 }
 
-@media only screen and (max-width: 768px) and (orientation: landscape) {
+@media only screen and (max-width: 768px) {
     .photo-grid {
-        grid-template-columns: repeat(3, minmax(100px, 1fr)); 
+        grid-template-columns: repeat(2, minmax(100px, 1fr)); 
         gap: 5px; 
         padding: 0 5px; 
-        margin-top: 60px;
+        margin-top:60px
     }
 
     .photo-item {
         height: 200px; 
         width: 150px; 
         object-fit: cover; 
+
+
     }
 
     .photo-item-title {
         font-size: 10px; 
     }
 }
+
 
 
 

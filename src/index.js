@@ -1,17 +1,23 @@
+// index.js
 import React from 'react';
-import ReactDOM from 'react-dom/client';
+import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
+window.addEventListener('orientationchange', function () {
+  if (window.orientation !== 0) { // Vérifie si l'orientation n'est pas en mode portrait
+    alert("Veuillez garder votre téléphone en mode portrait pour une meilleure expérience."); // Affiche un message d'alerte
+    setTimeout(function () {
+      window.screen.orientation.lock("portrait-primary").catch(function (error) {
+        console.error("Impossible de bloquer l'orientation en mode portrait:", error);
+      });
+    }, 0);
+  }
+});
+
+ReactDOM.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
