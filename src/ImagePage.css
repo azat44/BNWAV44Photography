@@ -126,10 +126,22 @@
     }
 }
 
-@media only screen and (max-width: 768px) and (orientation: landscape) {
+@media only screen and (max-width: 932px) and (orientation: landscape) {
     .image {
-        width: 450px; 
+        width: 250px; 
         height: 300px; 
         margin-top: 20px; 
+    }
+
+    .image-title {
+        font-size: 18px;
+        margin-bottom: 10px;
+        overflow-wrap: break-word;
+        font-weight: bold;  
+    }
+    
+    .image-description {
+        font-size: 14px;
+        font-weight: lighter; 
     }
 }

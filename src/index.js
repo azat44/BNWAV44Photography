@@ -1,29 +1,17 @@
-// index.js
 import React from 'react';
-import ReactDOM from 'react-dom';
+import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App';
+import reportWebVitals from './reportWebVitals';
 
-// Fonction pour bloquer l'orientation en mode portrait
-const lockOrientation = () => {
-  if (window.screen.orientation.type === "landscape-primary" || window.screen.orientation.type === "landscape-secondary") { // Vérifie si l'orientation n'est pas en mode portrait
-    setTimeout(() => {
-      window.screen.orientation.lock("portrait").catch((error) => {
-        console.error("Impossible de bloquer l'orientation en mode portrait:", error);
-      });
-    }, 0);
-  }
-};
-
-// Bloquer l'orientation au chargement de la page
-lockOrientation();
-
-// Écouter l'événement de changement d'orientation et bloquer l'orientation en mode portrait
-window.addEventListener('orientationchange', lockOrientation);
-
-ReactDOM.render(
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
   <React.StrictMode>
     <App />
-  </React.StrictMode>,
-  document.getElementById('root')
+  </React.StrictMode>
 );
+
+// If you want to start measuring performance in your app, pass a function
+// to log results (for example: reportWebVitals(console.log))
+// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
+reportWebVitals();
