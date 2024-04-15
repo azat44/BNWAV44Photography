@@ -6,7 +6,7 @@ import PhotoGalleryPage from './components/PhotoGallery';
 import ImagePage from './components/ImagePage';
 import ContactForm from './components/ContactForm/Contact';
 import About from './components/About';
-
+import ScrollToTopButton from './components/BackToTop';
 import { Cursor } from './components/Cursor';
 
 
@@ -27,6 +27,8 @@ const App = () => {
 
 
       </Routes>
+      <ScrollToTopButton pcScrollOffset={1600} mobileScrollOffset={2200} />
+
     </Router>
   );
 };

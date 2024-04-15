@@ -9,3 +9,35 @@ body {
   background: black;
   cursor: none;
 }
+
+.back-to-top {
+  position: fixed;
+  background: white;
+  color: #D3D3D3;
+  padding: 10px 12px 10px 12px;
+  font-size: 16px;
+  border-radius: 2px;
+  right: 15px;
+  bottom: 15px;
+  transition:0.8s;
+ z-index: 2;
+}
+
+.back-to-top:focus {
+  background: black;
+  color: black;
+  outline: none;
+}
+
+.back-to-top:hover {
+  background: white;
+  color: black;
+}
+
+@media (max-width: 768px) {
+  .back-to-top {
+    font-size: 4px; /* Réduire la taille de la police */
+    padding: 4px 6px; /* Réduire le rembourrage */
+    margin-right:-12px
+  }
+} 
