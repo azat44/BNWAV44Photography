@@ -4,16 +4,22 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 
-window.addEventListener('orientationchange', function () {
+// Fonction pour bloquer l'orientation en mode portrait
+const lockOrientation = () => {
   if (window.orientation !== 0) { // Vérifie si l'orientation n'est pas en mode portrait
-    alert("Veuillez garder votre téléphone en mode portrait pour une meilleure expérience."); // Affiche un message d'alerte
-    setTimeout(function () {
-      window.screen.orientation.lock("portrait-primary").catch(function (error) {
+    setTimeout(() => {
+      window.screen.orientation.lock("portrait-primary").catch((error) => {
         console.error("Impossible de bloquer l'orientation en mode portrait:", error);
       });
     }, 0);
   }
-});
+};
+
+// Bloquer l'orientation au chargement de la page
+lockOrientation();
+
+// Écouter l'événement de changement d'orientation et bloquer l'orientation en mode portrait
+window.addEventListener('orientationchange', lockOrientation);
 
 ReactDOM.render(
   <React.StrictMode>
