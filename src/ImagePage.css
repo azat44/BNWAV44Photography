@@ -65,14 +65,13 @@
 }
 
 @media only screen and (max-width: 768px) {
-    .image-page-container {
-        padding: 20px; 
-    }
+
 
     .image-content {
         flex-direction: column; 
         align-items: center; 
         margin-left: 0; 
+        max-width:1000px
     }
 
     .image {
@@ -85,7 +84,75 @@
 
     .image-details {
         margin-left: 0; 
-        max-width: 700px;
+        max-width: 1000px;
+        max-height:1000px;
+        text-align: center; 
+    }
+
+    .image-title {
+        font-size: 24px;
+        margin-top: 0; /* Supprimez le margin-top négatif */
+        overflow-wrap: break-word;
+        font-weight: bold;  
+        padding-top: 10px; /* Ajoutez du padding-top pour ajuster l'espacement */
+    }
+    
+
+    .image-description {
+        font-size: 16px; 
+    }
+
+    .navigation {
+        justify-content: center; 
+        margin-bottom: 10px;
+        
+    }
+
+    .navigation a {
+        font-size: 3rem; 
+        margin-left: 10px; 
+        margin-top:-25px
+    }
+
+    .image-index {
+        font-size: 22px; 
+        margin-left: 10px; 
+        margin-top:-25px
+    }
+
+    .image-title {
+        font-size: 24px;
+        margin-top: -20px;
+        overflow-wrap: break-word;
+        font-weight: bold;  
+    }
+    
+    .image-description {
+        font-size: 14px;
+        font-weight: lighter; 
+    }
+}
+
+@media only screen and (max-width: 932px) and (orientation: landscape) {
+
+
+    .image-content {
+        flex-direction: column; 
+        align-items: center; 
+        margin-left: 0; 
+    }
+
+    .image {
+        width: 150px; 
+        height: 300px; 
+        object-fit: cover;
+        margin-bottom: 20px; 
+        margin-top:10px
+    }
+
+    .image-details {
+        margin-left: 0; 
+        max-width: 1000px;
         text-align: center; 
     }
 
@@ -100,50 +167,37 @@
 
     .navigation {
         justify-content: center; 
-        margin-bottom: 20px;
+        margin-bottom: 10px;
+        margin-right:10px
+        
     }
 
     .navigation a {
-        font-size: 3rem; 
-        margin-left: 10px; 
+        font-size: 1.5rem; 
+        margin-top:-25px
     }
+    
 
     .image-index {
-        font-size: 22px; 
+        font-size: 20px; 
         margin-left: 10px; 
+        margin-top:-25px;
     }
 
     .image-title {
-        font-size: 24px;
-        margin-bottom: 10px;
+        font-size: 14px;
+        margin-top: -10px;
         overflow-wrap: break-word;
         font-weight: bold;  
     }
     
     .image-description {
-        font-size: 14px;
+        font-size: 12px;
         font-weight: lighter; 
     }
-}
 
-@media only screen and (max-width: 932px) and (orientation: landscape) {
-    .image {
-        width: 250px; 
-        height: 300px; 
-        margin-top: 20px; 
-    }
 
-    .image-title {
-        font-size: 18px;
-        margin-bottom: 10px;
-        overflow-wrap: break-word;
-        font-weight: bold;  
-    }
-    
-    .image-description {
-        font-size: 14px;
-        font-weight: lighter; 
-    }
+
 }
 
 body {

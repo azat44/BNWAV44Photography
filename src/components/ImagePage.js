@@ -63,7 +63,7 @@ const ImagePage = () => {
                     <Link
                         to={`/image/${(currentIndex - 1 + images.length) % images.length}`}
                         onClick={navigatePrevious}
-                        className="navigation-link"
+                        className="navigation-link1"
                     >
                         &lt;
                     </Link>
@@ -71,7 +71,7 @@ const ImagePage = () => {
                     <Link
                         to={`/image/${(currentIndex + 1) % images.length}`}
                         onClick={navigateNext}
-                        className="navigation-link"
+                        className="navigation-link2"
                     >
                         &gt;
                     </Link>
