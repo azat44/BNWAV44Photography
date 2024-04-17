@@ -57,13 +57,16 @@ const ImagePage = () => {
                 style={{ transition: 'all 0.6s ease' }}>
                 <SlArrowLeft />
             </Link>
+
+
             <div className="image-content">
+
                 <img src={image.src} alt={image.title} className="image" />
                 <div className="navigation">
+
                     <Link
                         to={`/image/${(currentIndex - 1 + images.length) % images.length}`}
                         onClick={navigatePrevious}
-                        className="navigation-link1"
                     >
                         &lt;
                     </Link>
@@ -71,7 +74,6 @@ const ImagePage = () => {
                     <Link
                         to={`/image/${(currentIndex + 1) % images.length}`}
                         onClick={navigateNext}
-                        className="navigation-link2"
                     >
                         &gt;
                     </Link>

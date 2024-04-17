@@ -48,7 +48,7 @@ const Cursor = () => {
     const isMobileDevice = isMobile();
 
     if (isMobileDevice) {
-        return null; // Ne rend pas le curseur personnalisé sur les appareils mobiles
+        return null;
     }
 
     return (

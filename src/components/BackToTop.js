@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { FaAngleUp } from 'react-icons/fa'; // Import de l'icône de flèche vers le haut
+import { FaAngleUp } from 'react-icons/fa';
 
 const ScrollToTopButton = ({ pcScrollOffset, mobileScrollOffset }) => {
     const [isVisible, setIsVisible] = useState(false);
@@ -25,7 +25,7 @@ const ScrollToTopButton = ({ pcScrollOffset, mobileScrollOffset }) => {
         return () => {
             window.removeEventListener('scroll', toggleVisibility);
         };
-    }, [pcScrollOffset, mobileScrollOffset]); // Utiliser un effet pour ajouter et retirer l'écouteur de scroll
+    }, [pcScrollOffset, mobileScrollOffset]);
 
     return (
         <div>

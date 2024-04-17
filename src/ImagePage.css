@@ -91,10 +91,10 @@
 
     .image-title {
         font-size: 24px;
-        margin-top: 0; /* Supprimez le margin-top négatif */
+        margin-top: 0; 
         overflow-wrap: break-word;
         font-weight: bold;  
-        padding-top: 10px; /* Ajoutez du padding-top pour ajuster l'espacement */
+        padding-top: 10px; 
     }
     
 
@@ -136,58 +136,60 @@
 
 @media only screen and (max-width: 932px) and (orientation: landscape) {
 
-
     .image-content {
-        flex-direction: column; 
+        display: flex;
+        flex-direction: row; 
         align-items: center; 
         margin-left: 0; 
     }
 
     .image {
-        width: 150px; 
+        width: 210px; 
         height: 300px; 
         object-fit: cover;
         margin-bottom: 20px; 
-        margin-top:10px
+        margin-top: 10px;
+        margin-left:80px
     }
 
     .image-details {
-        margin-left: 0; 
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
         max-width: 1000px;
-        text-align: center; 
-    }
-
-    .image-title {
-        font-size: 24px; 
-        margin-bottom: 10px; 
-    }
-
-    .image-description {
-        font-size: 16px; 
+        margin-top: 10px;
+        margin-bottom: 10px;
     }
 
     .navigation {
+        display: flex;
         justify-content: center; 
-        margin-bottom: 10px;
-        margin-right:10px
+        align-items: center;
+        margin-right:60px;
+        margin-top:360px;
+        margin-left:-160px
         
     }
 
     .navigation a {
         font-size: 1.5rem; 
-        margin-top:-25px
     }
-    
 
     .image-index {
         font-size: 20px; 
-        margin-left: 10px; 
-        margin-top:-25px;
+    }
+
+    .title-and-description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 1000px;
+        text-align: left; 
     }
 
     .image-title {
         font-size: 14px;
-        margin-top: -10px;
+        margin-top: 0;
         overflow-wrap: break-word;
         font-weight: bold;  
     }
@@ -196,12 +198,10 @@
         font-size: 12px;
         font-weight: lighter; 
     }
-
-
-
 }
 
+
 body {
-    overflow-y: scroll; /* Autoriser le défilement vertical */
-    overscroll-behavior-y: contain; /* Empêcher le défilement de se propager à l'élément parent */
+    overflow-y: scroll;
+    overscroll-behavior-y: contain; 
 }

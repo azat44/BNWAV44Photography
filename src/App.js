@@ -22,7 +22,7 @@ const App = () => {
       }
     };
 
-    showRotationInstructions(); // Afficher les instructions au chargement du composant
+    showRotationInstructions();
   }, []);
 
   return (
