@@ -17,7 +17,6 @@ const App = () => {
       if (window.screen && window.screen.orientation && window.screen.orientation.type) {
         const orientationType = window.screen.orientation.type;
         if (orientationType !== 'portrait-primary' && orientationType !== 'landscape-primary') {
-          alert("Veuillez verrouiller la rotation de votre appareil en mode portrait pour une meilleure expérience.");
         }
       }
     };
