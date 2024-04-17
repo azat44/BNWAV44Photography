@@ -134,7 +134,7 @@
     }
 }
 
-@media only screen and (max-width: 667px) and (orientation: landscape) {
+@media only screen and (max-width: 932px) and (orientation: landscape) {
 
     .image-content {
         display: flex;
@@ -165,7 +165,7 @@
         display: flex;
         justify-content: center; 
         align-items: center;
-        margin-right:50px;
+        margin-right:70px;
         margin-top:360px;
         margin-left:-165px
         
@@ -200,71 +200,7 @@
     }
 }
 
-@media only screen and (max-width: 932px) and (orientation: landscape) {
 
-    .image-content {
-        display: flex;
-        flex-direction: row; 
-        align-items: center; 
-        margin-left: 0; 
-    }
-
-    .image {
-        width: 210px; 
-        height: 300px; 
-        object-fit: cover;
-        margin-bottom: 20px; 
-        margin-top: 10px;
-        margin-left:80px
-    }
-
-    .image-details {
-        justify-content: space-between;
-        align-items: center;
-        width: 100%;
-        max-width: 1000px;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-    .navigation {
-        display: flex;
-        justify-content: center; 
-        align-items: center;
-        margin-right:70px;
-        margin-top:340px;
-        margin-left:-185px
-        
-    }
-
-    .navigation a {
-        font-size: 1.5rem; 
-    }
-
-    .image-index {
-        font-size: 20px; 
-    }
-
-    .title-and-description {
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        max-width: 1000px;
-        text-align: left; 
-    }
-
-    .image-title {
-        font-size: 14px;
-        margin-top: 0;
-        overflow-wrap: break-word;
-        font-weight: bold;  
-    }
-    
-    .image-description {
-        font-size: 12px;
-        font-weight: lighter; 
-    }
-}
 body {
     overflow-y: scroll;
     overscroll-behavior-y: contain; 
