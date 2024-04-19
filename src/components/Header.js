@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+
 import './Header.css';
 
 const Header = () => {
@@ -22,7 +24,16 @@ const Header = () => {
     }, []);
 
     return (
+
         <div className={`fixed inset-0 flex items-center justify-center text-center bg-black text-white text-3xl font-bold ${isDoorOpen ? 'door-open' : ''}`}>
+            <Helmet>
+                <meta name="title" content="Black and White Photography | @bnw_av44" />
+                <meta
+                    name="description"
+                    content="Explore stunning black and white photography by @bnw_av44. Discover captivating monochrome images, artistic compositions, and timeless moments."
+                />
+                <meta name="keywords" content="BlackAndWhitePhotography, BlackAndWhite, BlackAndWhitePhoto" />
+            </Helmet>
             <span>
                 <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-1">B</span>
                 <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-2">N</span>

@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { animated, useTrail } from 'react-spring';
 import { motion } from "framer-motion";
+import { Helmet } from 'react-helmet';
 import { SlArrowLeft } from "react-icons/sl";
 
 const MenusPage = () => {
@@ -17,6 +18,14 @@ const MenusPage = () => {
 
     return (
         <div className="flex items-center bg-white justify-center text-6xl font-bold h-screen">
+            <Helmet>
+                <meta name="title" content="About Black and White Photography | @bnw_av44" />
+                <meta
+                    name="description"
+                    content="Learn about the art of black and white photography with insights from @bnw_av44. Discover techniques, history, and the beauty of monochrome imagery."
+                />
+                <meta name="keywords" content="BlackAndWhitePhotography, AboutPhotography, MonochromeArt" />
+            </Helmet>
             <Link
                 to="/"
                 className="back-button bg-black text-gray-300 rounded-md p-2 transition duration-300 ease-in-out hover:bg-gray-300 hover:text-gray-800"
