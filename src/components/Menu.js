@@ -19,12 +19,10 @@ const MenusPage = () => {
     return (
         <div className="flex items-center bg-white justify-center text-6xl font-bold h-screen">
             <Helmet>
-                <meta name="title" content="About Black and White Photography | @bnw_av44" />
+                <meta name="title" content="Menus Black and White Photography | @bnw_av44" />
                 <meta
-                    name="description"
-                    content="Learn about the art of black and white photography with insights from @bnw_av44. Discover techniques, history, and the beauty of monochrome imagery."
-                />
-                <meta name="keywords" content="BlackAndWhitePhotography, AboutPhotography, MonochromeArt" />
+                    name="description" />
+                <meta name="keywords" content="BlackAndWhitePhotography, MenuPhotography, MonochromeArt" />
             </Helmet>
             <Link
                 to="/"

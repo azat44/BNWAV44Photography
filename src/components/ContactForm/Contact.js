@@ -4,6 +4,7 @@ import InputField from "./InputField";
 import TextareaField from "./TextAreaField";
 import { ChevronRightIcon } from '@heroicons/react/solid';
 import { Link } from 'react-router-dom';
+import { Helmet } from "react-helmet";
 import { SlArrowLeft } from "react-icons/sl";
 import emailjs from 'emailjs-com';
 import Aos from 'aos';
@@ -96,6 +97,26 @@ const ContactForm = () => {
     return (
 
         <div className="contact-container">
+            <Helmet>
+                <meta charSet="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Contact BNW-AV - Black and White Photography</title>
+                <meta
+                    name="description"
+                    content="Get in touch with BNW-AV for inquiries, commissions, or collaborations. Our team of black and white photography experts is ready to assist you."
+                />
+                <meta
+                    name="keywords"
+                    content="contact black and white photography, monochrome photography, fine art photography, portrait photography, landscape photography"
+                />
+                <meta name="author" content="BNW-AV" />
+                {/* Open Graph meta tags */}
+                {/* ... */}
+                {/* Twitter meta tags */}
+                {/* ... */}
+                {/* Canonical URL */}
+                <link rel="canonical" href="https://www.bnw-av.com/contact" />
+            </Helmet>
             <div className="mobile-header">
                 <div className="flex flex-col justify-center text-center lg:p-40 md:text-left">
                     <p data-aos="fade-down" className="uppercase font-medium opacity-40 text-white">Contact Us</p>
@@ -111,7 +132,9 @@ const ContactForm = () => {
             <animated.div style={fadeIn} className="contact-form">
                 {status && renderAlert()}
                 <form onSubmit={handleSubmit}>
-                    <h3 className="text-gray-700 mb-7 text-xl font-semibold">Send me a message</h3>
+                    <h3 className="text-gray-700 mb-7 text-ms font-semibold">Please complete the form if you have inquiries regarding licensing, usage, or any other matters related to these photographs.
+
+                    </h3>
                     <InputField
                         value={values.fullName}
                         handleChange={handleChange}

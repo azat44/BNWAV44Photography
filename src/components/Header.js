@@ -61,6 +61,7 @@ const Header = () => {
                 />
                 {/* Canonical URL */}
                 <link rel="canonical" href="https://www.bnw-av.com/" />
+
             </Helmet>
             <span>
                 <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-1">B</span>
