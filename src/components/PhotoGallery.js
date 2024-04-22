@@ -79,12 +79,27 @@ const PhotoGalleryPage = () => {
     return (
         <div className="flex justify-center items-center bg-black">
             <Helmet>
-                <meta name="title" content="Photos Black and White | @bnw_av44" />
+
+
+                <meta charSet="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>Contact BNW-AV - Black and White Photography</title>
                 <meta
                     name="description"
-                    content="Browse a curated collection of black and white photos by @bnw_av44. From landscapes to portraits, explore the power of monochrome imagery."
+                    content="Get in touch with BNW-AV for inquiries, commissions, or collaborations. Our team of black and white photography experts is ready to assist you."
                 />
-                <meta name="keywords" content="BlackAndWhitePhotos, MonochromeImages, PhotographyGallery" />
+                <meta
+                    name="keywords"
+                    content="contact black and white photography, monochrome photography, fine art photography, portrait photography, landscape photography"
+                />
+                <meta name="author" content="BNW-AV" />
+                {/* Open Graph meta tags */}
+                {/* ... */}
+                {/* Twitter meta tags */}
+                {/* ... */}
+                {/* Canonical URL */}
+                {/* Canonical URL */}
+                <link rel="canonical" href="https://www.bnw-av.com/photos" />
             </Helmet>
             <Link
                 to="/menus"

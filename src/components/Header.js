@@ -27,12 +27,40 @@ const Header = () => {
 
         <div className={`fixed inset-0 flex items-center justify-center text-center bg-black text-white text-3xl font-bold ${isDoorOpen ? 'door-open' : ''}`}>
             <Helmet>
-                <meta name="title" content="Black and White Photography | @bnw_av44" />
+                <meta charSet="UTF-8" />
+                <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+                <title>BNW-AV - Black and White Photography</title>
                 <meta
                     name="description"
-                    content="Explore stunning black and white photography by @bnw_av44. Discover captivating monochrome images, artistic compositions, and timeless moments."
+                    content="Discover the beauty of black and white photography with BNW-AV. Explore our stunning collection of monochrome images and immerse yourself in the timeless art of monochrome photography."
                 />
-                <meta name="keywords" content="BlackAndWhitePhotography, BlackAndWhite, BlackAndWhitePhoto" />
+                <meta
+                    name="keywords"
+                    content="black and white photography, monochrome, fine art photography, portrait photography, landscape photography"
+                />
+                <meta name="author" content="BNW-AV" />
+                {/* Open Graph meta tags */}
+                <meta property="og:title" content="BNW-AV - Black and White Photography" />
+                <meta
+                    property="og:description"
+                    content="Discover the beauty of black and white photography with BNW-AV. Explore our stunning collection of monochrome images and immerse yourself in the timeless art of monochrome photography."
+                />
+                <meta property="og:image" content="https://www.bnw-av.com/og-image.jpg" />
+                <meta property="og:url" content="https://www.bnw-av.com/" />
+                <meta property="og:type" content="website" />
+                {/* Twitter meta tags */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="BNW-AV - Black and White Photography" />
+                <meta
+                    name="twitter:description"
+                    content="Discover the beauty of black and white photography with BNW-AV. Explore our stunning collection of monochrome images and immerse yourself in the timeless art of monochrome photography."
+                />
+                <meta
+                    name="twitter:image"
+                    content="https://www.bnw-av.com/twitter-image.jpg"
+                />
+                {/* Canonical URL */}
+                <link rel="canonical" href="https://www.bnw-av.com/" />
             </Helmet>
             <span>
                 <span onAnimationEnd={handleLetterAnimationEnd} className="animation-delay-1">B</span>
