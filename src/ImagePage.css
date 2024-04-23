@@ -96,7 +96,8 @@
     .image-details {
         margin-left: 0; 
         max-width: 1000px;
-            text-align: center; 
+        text-align: center;
+        height: 200px; /* Réglez cette hauteur en fonction de votre contenu */
         overflow-y: auto;
     }
     
