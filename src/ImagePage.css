@@ -140,8 +140,10 @@
     }
     
     .image-description {
-        font-size: 14px;
+        font-size: 20px;
         font-weight: lighter; 
+        overflow-wrap: break-word;
+
     }
 }
 

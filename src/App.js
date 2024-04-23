@@ -13,15 +13,23 @@ import "./App.css"
 
 const App = () => {
   useEffect(() => {
-    const showRotationInstructions = () => {
-      if (window.screen && window.screen.orientation && window.screen.orientation.type) {
-        const orientationType = window.screen.orientation.type;
-        if (orientationType !== 'portrait-primary' && orientationType !== 'landscape-primary') {
-        }
+    const disableRightClick = (e) => {
+      e.preventDefault();
+    };
+
+    const disableF12 = (e) => {
+      if (e.keyCode === 123) {
+        e.preventDefault();
       }
     };
 
-    showRotationInstructions();
+    document.addEventListener('contextmenu', disableRightClick);
+    document.addEventListener('keydown', disableF12);
+
+    return () => {
+      document.removeEventListener('contextmenu', disableRightClick);
+      document.removeEventListener('keydown', disableF12);
+    };
   }, []);
 
   return (
