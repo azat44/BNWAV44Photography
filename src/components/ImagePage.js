@@ -45,10 +45,10 @@ const images = [
     { src: require('../images/38.webp'), title: 'BNWAV©_red-19.1', description: 'The surest way to corrupt a youth is to instruct him to hold in higher esteem those who think alike than those who think differently.' },
     { src: require('../images/21.webp'), title: 'BNWAV©_red-10.1', description: 'The individual has always had to struggle to keep from being overwhelmed by the tribe. If you try it, you will be lonely often, and sometimes frightened. But no price is too high to pay for the privilege of owning yourself.' },
     { src: require('../images/24.webp'), title: 'BNWAV©_red-11.2', description: 'We have no need for other worlds. We need mirrors. We don’t know what to do with other worlds. A mirror is enough.' },
-    { src: require('../images/41.webp'), title: 'BNWAV©_red-21.1', description: 'We have art in order not to die of the truth.' },
+    { src: require('../images/46.webp'), title: 'BNWAV©_red-21.1', description: 'We have art in order not to die of the truth.' },
     { src: require('../images/27.webp'), title: 'BNWAV©_red-14.1', description: 'The doer alone learns.' },
-    { src: require('../images/43.webp'), title: 'BNWAV©_red-22.2', description: 'Don’t rush anything. When the time is right, it’ll happen.' },
-    { src: require('../images/44.webp'), title: 'BNWAV©_red-21.2', description: 'I’m not upset that you lied to me, I’m upset that from now on I can’t believe you.' },
+    { src: require('../images/47.webp'), title: 'BNWAV©_red-22.2', description: 'Don’t rush anything. When the time is right, it’ll happen.' },
+    { src: require('../images/48.webp'), title: 'BNWAV©_red-21.2', description: 'I’m not upset that you lied to me, I’m upset that from now on I can’t believe you.' },
 
 ];
 
