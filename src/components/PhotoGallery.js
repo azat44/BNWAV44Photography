@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 const images = [
     { src: require('../images/5.webp'), title: 'BNWAV©_red-1.1', description: 'Description de l\'image 1' },
-    { src: require('../images/3.webp'), title: 'BNWAV©_red-12.2', description: 'Description de l\'image 2' },
+    { src: require('../images/45.webp'), title: 'BNWAV©_red-12.2', description: 'Description de l\'image 2' },
     { src: require('../images/2.webp'), title: 'BNWAV©_red-9.1', description: 'Description de l\'image 3' },
     { src: require('../images/6.webp'), title: 'BNWAV©_red-1.2', description: 'Description de l\'image 4' },
     { src: require('../images/8.webp'), title: 'BNWAV©_red-2.2', description: 'Description de l\'image 4' },
@@ -48,10 +48,10 @@ const images = [
     { src: require('../images/38.webp'), title: 'BNWAV©_red-19.1', description: 'Description de l\'image 4' },
     { src: require('../images/21.webp'), title: 'BNWAV©_red-10.1', description: 'Description de l\'image 4' },
     { src: require('../images/24.webp'), title: 'BNWAV©_red-11.2', description: 'Description de l\'image 4' },
-    { src: require('../images/41.webp'), title: 'BNWAV©_red-21.1', description: 'Description de l\'image 4' },
+    { src: require('../images/46.webp'), title: 'BNWAV©_red-21.1', description: 'Description de l\'image 4' },
     { src: require('../images/27.webp'), title: 'BNWAV©_red-14.1', description: 'Description de l\'image 4' },
-    { src: require('../images/43.webp'), title: 'BNWAV©_red-22.2', description: 'Description de l\'image 4' },
-    { src: require('../images/44.webp'), title: 'BNWAV©_red-21.2', description: 'Description de l\'image 4' },
+    { src: require('../images/47.webp'), title: 'BNWAV©_red-22.2', description: 'Description de l\'image 4' },
+    { src: require('../images/48.webp'), title: 'BNWAV©_red-21.2', description: 'Description de l\'image 4' },
 ];
 
 const PhotoGalleryPage = () => {

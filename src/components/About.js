@@ -8,7 +8,7 @@ const About = () => {
     const textItems = [
         "Welcome to the Black and White Photography @bnw_av44 website, which is dedicated to black and white photography, shadows, and architecture.",
         "I wish you could see the colors between illumination and darkness.",
-        "Like black-and-white colors, our lives are composed of contrasted phases, and we value our lives when we realize that true happiness is when we don’t suffer.",
+        "Like black-and-white colors, our lives are composed of contrasted phases, and we actually live when we realize that true happiness is when we don’t suffer.",
         "Each of my photos has its own story, and I have added a quote to each of them.",
         "Take the time to discover my <a href='https://www.instagram.com/bnw_av44/' target='_blank' rel='noopener noreferrer' style='color: white; text-decoration: underline; transition: color 0.3s;'>instagram page</a>."
     ];

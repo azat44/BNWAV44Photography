@@ -6,7 +6,7 @@ import '../ImagePage.css';
 
 const images = [
     { src: require('../images/5.webp'), title: 'BNWAV©_red-1.1', description: 'Don’t search yourself in others you will never find you.' },
-    { src: require('../images/3.webp'), title: 'BNWAV©_red-12.2', description: 'One must still have chaos in oneself to be able to give birth to a dancing star.' },
+    { src: require('../images/45.webp'), title: 'BNWAV©_red-12.2', description: 'One must still have chaos in oneself to be able to give birth to a dancing star.' },
     { src: require('../images/2.webp'), title: 'BNWAV©_red-9.1', description: 'The way is in the heart..' },
     { src: require('../images/6.webp'), title: 'BNWAV©_red-1.2', description: 'Is not life a thousand times too short for us to bore ourselves?' },
     { src: require('../images/8.webp'), title: 'BNWAV©_red-2.2', description: 'I do not want to wage war against what is ugly. I do not want to accuse; I do not even want to accuse those who accuse.' },
