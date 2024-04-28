@@ -37,7 +37,7 @@ const ContactForm = () => {
                 setMessageError('Please enter a message');
                 return;
             }
-            emailjs.send('service_k4ccu27', 'template_h90zhhd', {
+            emailjs.send('service_awo2o1w', 'template_wuye0z8', {
                 from_name: values.fullName,
                 reply_to: values.email,
                 message: values.message
@@ -120,7 +120,7 @@ const ContactForm = () => {
             <div className="mobile-header">
                 <div className="flex flex-col justify-center text-center lg:p-40 md:text-left">
                     <p data-aos="fade-down" className="uppercase font-medium opacity-40 text-white">Contact</p>
-                    <h1 data-aos="fade-up" className="lg:text-6xl md:text-5xl text-white text-4xl">We want to hear from you</h1>
+                    <h1 data-aos="fade-up" className="lg:text-6xl md:text-5xl text-white text-4xl">Please complete the form.</h1>
                 </div>
             </div>
             <Link
@@ -132,7 +132,7 @@ const ContactForm = () => {
             <animated.div style={fadeIn} className="contact-form">
                 {status && renderAlert()}
                 <form onSubmit={handleSubmit}>
-                    <h3 className="text-gray-700 mb-7 text-ms font-semibold">Please complete the form if you have inquiries regarding licensing, usage, or any other matters related to these copyrighted photographs.
+                    <h3 className="text-gray-700 mb-7 text-ms font-semibold">If you have inquiries regarding licensing, usage, or any other matters related to these copyrighted photographs, please send me a message.
 
                     </h3>
                     <InputField
