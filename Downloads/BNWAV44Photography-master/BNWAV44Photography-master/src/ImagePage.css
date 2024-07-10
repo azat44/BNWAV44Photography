@@ -1,0 +1,230 @@
+.image-page-container {
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; 
+    width: 100%; 
+    background-color: black;
+}
+
+.image-content {
+    position: relative; 
+    display: flex;
+    align-items: center;
+    max-width: 100%;
+    overflow: hidden;
+    margin-left: 100px; 
+    margin-bottom: 20px; 
+}
+
+.image {
+    width: 400px; 
+    height: 530px; 
+    object-fit: cover; 
+}
+
+.image-details {
+    margin-left: 20px;
+    color: white;
+    max-width: 50%;
+    overflow-y: auto; 
+}
+
+.image-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+    overflow-wrap: break-word;
+    font-weight: bold;
+    display: block; 
+    min-height: 32px; 
+}
+
+.image-description {
+    font-size: 18px;
+    font-weight: lighter; 
+    display: block; 
+
+}
+
+.navigation {
+    margin-top:10px;
+    right: calc(50% - 165px); 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navigation a {
+    font-size: 2rem;
+    color: lightgray;
+    margin-left: 20px;
+    text-decoration: none;
+}
+
+.navigation a:hover {
+    color: gray;
+}
+
+.image-index {
+    font-size: 24px;
+    color: white;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px) {
+
+
+    .image-content {
+        flex-direction: column; 
+        align-items: center; 
+        margin-left: 0; 
+        margin-top:-30px
+    }
+
+    .image {
+        width: 250px; 
+        height: 300px; 
+        object-fit: cover;
+        margin-bottom: 20px; 
+        margin-top:60px
+    }
+
+    .image-details {
+        margin-left: 0; 
+        max-width: 1000px;
+        text-align: center;
+        height: 200px; /* Réglez cette hauteur en fonction de votre contenu */
+        overflow-y: auto;
+    }
+    
+
+    .image-title {
+        font-size: 24px;
+        margin-top: 0; 
+        overflow-wrap: break-word;
+        font-weight: bold;  
+        padding-top: 20px; 
+    }
+    
+
+    .image-description {
+        font-size: 16px; 
+    }
+
+    .navigation {
+        justify-content: center; 
+        margin-bottom: 10px;
+        margin-right:10px
+        
+    }
+
+    .navigation a {
+        font-size: 3rem; 
+        margin-left: 10px; 
+        margin-top:-25px
+    }
+
+    .image-index {
+        font-size: 22px; 
+        margin-left: 10px; 
+        margin-top:-25px
+    }
+
+    .image-title {
+        font-size: 18px;
+        margin-top: -20px;
+        overflow-wrap: break-word;
+        font-weight: bold;  
+    }
+    
+    .image-description {
+        font-size: 17px;
+        font-weight: lighter; 
+        overflow-wrap: break-word;
+
+    }
+}
+
+@media only screen and (max-width: 932px) and (orientation: landscape) {
+
+    .image-content {
+        display: flex;
+        flex-direction: row; 
+        align-items: center; 
+        margin-left: 0; 
+    }
+
+    .image {
+        width: 210px; 
+        height: 300px; 
+        object-fit: cover;
+        margin-bottom: 20px; 
+        margin-top: 10px;
+        margin-left:80px
+    }
+
+    .image-details {
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        max-width: 1000px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .navigation {
+        margin-top:10px;
+        right: calc(50% - 165px); 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    
+
+    .navigation a {
+        font-size: 1.5rem; 
+    }
+
+    .image-index {
+        font-size: 20px; 
+    }
+
+    .title-and-description {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        max-width: 1000px;
+        text-align: left; 
+    }
+
+    .image-title {
+        font-size: 14px;
+        margin-top: 0;
+        overflow-wrap: break-word;
+        font-weight: bold;  
+    }
+    
+    .image-description {
+        font-size: 12px;
+        font-weight: lighter; 
+    }
+}
+
+
+body {
+    overflow-y: scroll;
+    overscroll-behavior-y: contain; 
+}
+
+@media only screen and (min-width: 769px) {
+    .navigation {
+        position: fixed; 
+        top: 20px; 
+        right: 20px; 
+    }
+}
