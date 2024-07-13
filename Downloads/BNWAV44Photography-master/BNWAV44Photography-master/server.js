@@ -1,40 +1,69 @@
-require('./babelSetup');
-
-const path = require('path');
 const express = require('express');
+const path = require('path');
 const fs = require('fs');
 const React = require('react');
 const ReactDOMServer = require('react-dom/server');
-const favicon = require('serve-favicon');
+const { StaticRouter } = require('react-router-dom/server');
 const App = require('./src/App').default;
 
+const PORT = process.env.PORT || 3000;
 const app = express();
 
-// Serve the favicon
-app.use(favicon(path.join(__dirname, 'public', '@bnw_av44_Black and white photography favicon copy.ico')));
+// Servir les fichiers statiques avec mise en cache
+app.use(express.static(path.resolve(__dirname, 'build'), {
+  maxAge: '30d',
+}));
 
-// Serve static files from the build directory
-app.use(express.static(path.resolve(__dirname, 'build')));
-
-app.get('*', (req, res) => {
-  const context = {};
-  const appString = ReactDOMServer.renderToString(
-    React.createElement(App, { location: req.url, context })
-  );
-
-  const indexFile = path.resolve(__dirname, 'build', 'index.html');
-  fs.readFile(indexFile, 'utf8', (err, data) => {
-    if (err) {
-      console.error('Something went wrong:', err);
-      return res.status(500).send('Oops, better luck next time!');
-    }
-
-    return res.send(
-      data.replace('<div id="root"></div>', `<div id="root">${appString}</div>`)
-    );
-  });
+// Mettre en cache le fichier index.html
+let indexHTML;
+fs.readFile(path.resolve('./build/index.html'), 'utf8', (err, data) => {
+  if (err) {
+    console.error('Error reading index.html:', err);
+    process.exit(1);
+  }
+  indexHTML = data;
 });
 
-app.listen(3000, () => {
-  console.log('Server is listening on port 3000');
+app.get('/*', (req, res) => {
+  console.log(`Received request for: ${req.url}`);
+  const context = {};
+  
+  try {
+    const appMarkup = ReactDOMServer.renderToString(
+      <StaticRouter location={req.url} context={context}>
+        <App />
+      </StaticRouter>
+    );
+    console.log(`Rendered app markup for: ${req.url}`);
+
+    if (context.url) {
+      console.log(`Redirecting to: ${context.url}`);
+      return res.redirect(301, context.url);
+    }
+
+    if (context.notFound) {
+      console.log(`404 Not Found for: ${req.url}`);
+      res.status(404);
+    }
+
+    const html = indexHTML.replace(
+      '<div id="root"></div>',
+      `<div id="root">${appMarkup}</div>`
+    );
+
+    res.send(html);
+  } catch (error) {
+    console.error(`Error rendering app for ${req.url}:`, error);
+    res.status(500).send('An internal server error occurred');
+  }
+});
+
+// Gestion d'erreur globale
+app.use((err, req, res, next) => {
+  console.error('Server error:', err);
+  res.status(500).send('An internal server error occurred');
+});
+
+app.listen(PORT, () => {
+  console.log(`Server is listening on port ${PORT}`);
 });

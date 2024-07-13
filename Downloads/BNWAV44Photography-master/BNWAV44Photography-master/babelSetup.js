@@ -1,14 +1,11 @@
+require('ignore-styles').default(['.css', '.png', '.jpg', '.jpeg', '.gif', '.webp', '.svg']);
 require('@babel/register')({
-    ignore: [/(node_modules)/, /\.css$/, /\.png$/, /\.jpg$/, /\.jpeg$/, /\.gif$/, /\.svg$/, /\.webp$/],
-    presets: ['@babel/preset-env', '@babel/preset-react']
-  });
-  
-  // Ignore CSS and image file imports
-  require.extensions['.css'] = () => {};
-  require.extensions['.png'] = () => {};
-  require.extensions['.jpg'] = () => {};
-  require.extensions['.jpeg'] = () => {};
-  require.extensions['.gif'] = () => {};
-  require.extensions['.svg'] = () => {};
-  require.extensions['.webp'] = () => {};
-  
+  presets: ['@babel/preset-env', '@babel/preset-react'],
+  ignore: [/(node_modules)/],
+  extensions: ['.js', '.jsx'],
+});
+
+require('css-modules-require-hook')({
+  extensions: ['.css'],
+  generateScopedName: '[name]__[local]___[hash:base64:5]',
+});
